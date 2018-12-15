@@ -18,9 +18,6 @@
             <a class="nav-link" href="#"><router-link to="/Products">Products</router-link> |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><router-link to="/Users">Users</router-link> |</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#"><router-link to="/Graph">Graph</router-link> |</a>
           </li>
         </ul>
