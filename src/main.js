@@ -9,17 +9,9 @@ import "hchs-vue-charts";
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue);
+Vue.use(window.VueCharts)
 new Vue({
   router,
   render: h => h(App)
 }).$mount('#app')
 
-
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});

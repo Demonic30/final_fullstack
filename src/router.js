@@ -5,7 +5,6 @@ import Employee from './views/Employee.vue'
 import Graph from './views/Graph.vue'
 
 Vue.use(Router)
-Vue.use(window.VueCharts)
 
 export default new Router({
   routes: [

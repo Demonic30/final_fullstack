@@ -25,16 +25,16 @@
     <template slot="row-details" slot-scope="row">
       <b-card>
         <b-row class="mb-2">
-          <b-col sm="3" class="text-sm-right"><b>Product_ID:</b></b-col>
-          <b-col>{{ row.item.id }}</b-col>
+          <b-col sm="3" class="text-sm-right"><b>Title:</b></b-col>
+          <b-col>{{ row.item.title }}</b-col>
         </b-row>
         <b-row class="mb-2">
-          <b-col sm="3" class="text-sm-right"><b>Created_at:</b></b-col>
-          <b-col>{{ row.item.created_at }}</b-col>
+          <b-col sm="3" class="text-sm-right"><b>Address:</b></b-col>
+          <b-col>{{ row.item.address }}</b-col>
         </b-row>
         <b-row class="mb-2">
-          <b-col sm="3" class="text-sm-right"><b>Tags:</b></b-col>
-          <b-col>{{ row.item.tags }}</b-col>
+          <b-col sm="3" class="text-sm-right"><b>Home_phone:</b></b-col>
+          <b-col>{{ row.item.home_phone }}</b-col>
         </b-row>
         <b-button size="sm" @click="row.toggleDetails">Hide Details</b-button>
       </b-card>
@@ -62,18 +62,17 @@ export default {
       pageSize:10,
       pageIndex:1,
       fields: [ {
-          key: "id",
-          sortable: true
-        },
-        {
-          key: "title",
-          sortable: true
-        },
-        {
-          key: "price",
+          key: "employee_id",
           sortable: true,
           variant: 'danger'
-          
+        },
+        {
+          key: "first_name",
+          sortable: true
+        },
+        {
+          key: "last_name",
+          sortable: true  
         },
         {
           key:  'show_details'  
@@ -90,11 +89,11 @@ export default {
     }
   },
   async mounted() {
-    let products = await axios.get(
-      "https://glacial-caverns-89319.herokuapp.com/api/products"
+    let employee = await axios.get(
+      "https://blooming-peak-33471.herokuapp.com/api/employee"
     );
-    products = products.data.data;
-    this.items = products;
+    employee = employee.data.data;
+    this.items = employee;
     //   axios
     //   .get('https://glacial-caverns-89319.herokuapp.com/api/products')
     //   .then((response) => {

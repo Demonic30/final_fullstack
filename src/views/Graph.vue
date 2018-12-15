@@ -1,5 +1,5 @@
 <template>
-<div><chartjs-bar v-bind:labels="labels" v-bind:datasets="datasets" v-bind:option="option"></chartjs-bar></div>
+<div v-if="datasets[0].data.length >0"><chartjs-bar v-bind:labels="labels" v-bind:datasets="datasets" v-bind:option="option"></chartjs-bar></div>
  
 </template>
 
@@ -13,7 +13,7 @@ export default {
             labels: [ ],
             datasets:[{
                 data:[],
-                backgroundColor:["Red","Yellow","Purple","Red","Yellow","Purple","Red","Yellow","Purple","Purple","Purple","Purple","Purple","Yellow","Purple","Yellow","Purple","Yellow","Purple","Red","Yellow","Purple","Red","Yellow","Purple"]
+                backgroundColor:["Red","Yellow","Purple","Blue","green"]
             }],
             option:{
                 title:{
@@ -27,14 +27,12 @@ export default {
   mounted(){
       var instance = this
       axios
-      .get("https://glacial-caverns-89319.herokuapp.com/api/products")
+      .get('https://blooming-peak-33471.herokuapp.com/api/city')
       .then(function(response){
 for(var i=0;i<response.data.data.length;i++){
-    console.log(response.data.data[i].id)
-instance.labels.push(response.data.data[i].id)
-instance.datasets[0].data.push(response.data.data[i].price)}
+instance.labels.push(response.data.data[i].city)
+instance.datasets[0].data.push(response.data.data[i].count)}
       })
-  },
-  
+  }
 };
 </script>
