@@ -1,6 +1,9 @@
 <template>
+<b-container>
+  <!-- Content here -->
+
 <div v-if="datasets[0].data.length >0"><chartjs-bar v-bind:labels="labels" v-bind:datasets="datasets" v-bind:option="option"></chartjs-bar></div>
- 
+ </b-container>
 </template>
 
 <script>  
@@ -19,7 +22,7 @@ export default {
                 title:{
                     display:true,
                     position:"bottom",
-                    text: "Fruits"
+                    text: "Employee"
                 }
             }
         };
