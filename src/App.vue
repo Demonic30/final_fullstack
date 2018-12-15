@@ -15,7 +15,7 @@
             <a class="nav-link" href="#"><router-link to="/about">About</router-link> |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><router-link to="/Products">Products</router-link> |</a>
+            <a class="nav-link" href="#"><router-link to="/Employee">Employee</router-link> |</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><router-link to="/Graph">Graph</router-link> |</a>

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Products from './views/Products.vue'
+import Employee from './views/Employee.vue'
 import Graph from './views/Graph.vue'
 
 Vue.use(Router)
@@ -14,9 +14,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/products',
-      name: 'products',
-      component: Products
+      path: '/employee',
+      name: 'employee',
+      component: Employee
     },
     {
       path: '/graph',
