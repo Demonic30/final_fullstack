@@ -59,7 +59,7 @@ export default {
       message: "Project 2",
       items: [],
       filter: null,
-      pageSize:10,
+      pageSize:5,
       pageIndex:1,
       fields: [ {
           key: "employee_id",
